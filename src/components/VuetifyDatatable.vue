@@ -57,7 +57,7 @@
 
               <template v-slot:[`item.loc`]="{ item }">
                   <p v-for="(each,index) in item.location.filter(x => x.latitude !== null)" :key="each.latitude">
-                    <a :href="'http://www.google.com/maps/place/' + each.latitude + '/' + each.longitude"> {{ each.latitude }},
+                    <a :href="'http://www.google.com/maps/place/' + each.latitude + ',' + each.longitude"> {{ each.latitude }},
                       {{ each.longitude }}<hr v-if="index !== item.location.length-1 "></a>     
                   </p>
               </template>
